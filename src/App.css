@@ -1,0 +1,16 @@
+/* src\App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Edu AU VIC WA NT Hand";
+  src: url("fonts/edu-au-vic-wa-nt-hand.woff2") format("woff2"),
+       url("fonts/edu-au-vic-wa-nt-hand.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2 {
+  font-family: "Edu AU VIC WA NT Hand", sans-serif;
+}
