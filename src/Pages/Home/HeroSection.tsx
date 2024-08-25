@@ -4,10 +4,10 @@ import { faSearch, faMapMarkerAlt, faToolbox, faTree, faWrench, faBolt, faHammer
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-pink-50 via-pink-100 to-pink-50 py-16 lg:py-24">
+    <section className="bg-gradient-to-r from-pink-50 via-pink-100 to-pink-50 py-16 lg:py-40">
       <div className="container mx-auto text-center px-4">
         {/* Heading */}
-        <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-6 lg:mb-10 w-full lg:w-2/3 mx-auto leading-snug lg:leading-tight">
+        <h1 className="text-4xl lg:text-6xl font-extrabold text-gray-800 mb-6 lg:mb-10 w-full lg:w-2/3 mx-auto leading-snug lg:leading-tight">
           Discover Trusted Professionals Near You
         </h1>
         <p className="text-base lg:text-lg text-gray-600 mb-8 lg:mb-10 w-full lg:w-2/3 mx-auto">
