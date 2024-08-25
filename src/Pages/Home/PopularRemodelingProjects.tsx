@@ -27,12 +27,12 @@ const PopularRemodelingProjects: React.FC = () => {
 
   return (
     <section className="py-12 bg-gray-50">
-      <div className="container mx-auto text-center">
-        <h2 className="text-2xl font-bold mb-8">Popular remodeling projects</h2>
+      <div className="container mx-auto text-center px-4">
+        <h2 className="text-2xl font-bold mb-8">Popular Remodeling Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div key={project.id} className="relative rounded-lg overflow-hidden shadow-lg">
-              <img src={project.image} alt={project.title} className="w-full h-96 object-cover" />
+              <img src={project.image} alt={project.title} className="w-full h-64 md:h-96 object-cover" />
               {project.subtitle && (
                 <span className="absolute top-4 left-4 bg-gray-800 text-white text-xs px-2 py-1 rounded">
                   {project.subtitle}
