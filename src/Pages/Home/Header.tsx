@@ -41,14 +41,20 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-purple-50 border-b">
-      <div className="container mx-auto flex justify-between items-center p-6">
+      <div className="container mx-auto flex justify-between items-center p-2">
         {/* Main Header: Logo and Join Our Pro Network */}
         <div className="flex items-center">
-          <div className="profixer text-xl sm:text-4xl font-bold text-pink-500 italic">Profixers</div>
+          <div className="profixer text-xl sm:text-2xl font-bold text-pink-500 italic">Profixers</div>
         </div>
         
         <div className="flex items-center space-x-4">
-        <a href="#" className="text-gray-700 font-medium hidden sm:block text-lg">Become a Profixer</a>
+        <a 
+                href="#" 
+                className="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:shadow-2xl hover:bg-gradient-to-l transition duration-300 ease-in-out text-lg hidden sm:block"
+                >
+                Become a Profixer
+                </a>
+
           <div className="hidden md:flex space-x-4">
             <button className="flex items-center text-gray-700 border px-3 py-2 rounded">
               <FontAwesomeIcon icon={faUserCircle} className="mr-2" />
@@ -175,7 +181,7 @@ const Header: React.FC = () => {
      {/* Subheader: Navigation Links */}
         <div className="bg-gradient-to-r from-purple-500 to-pink-500">
         <div className="container mx-auto">
-            <div className="flex items-center ml-4 space-x-6 overflow-x-auto py-4 text-sm sm:text-lg font-semibold text-white">
+            <div className="flex items-center ml-4 space-x-6 overflow-x-auto py-2 text-sm  font-semibold text-white">
             <a href="#" className="flex-shrink-0 px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg">
                 Interior
             </a>
