@@ -50,7 +50,7 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-4">
         <a 
                 href="#" 
-                className="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:shadow-2xl hover:bg-gradient-to-l transition duration-300 ease-in-out text-lg hidden sm:block"
+                className="bg-gradient-to-r from-purple-700 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:shadow-2xl hover:bg-gradient-to-l transition duration-300 ease-in-out text-lg hidden sm:block"
                 >
                 Become a Profixer
                 </a>
@@ -179,7 +179,7 @@ const Header: React.FC = () => {
       )}
 
      {/* Subheader: Navigation Links */}
-        <div className="bg-gradient-to-r from-purple-500 to-pink-500">
+        <div className="bg-gradient-to-r from-purple-600 to-purple-400">
         <div className="container mx-auto">
             <div className="flex items-center ml-4 space-x-6 overflow-x-auto py-2 text-sm  font-semibold text-white">
             <a href="#" className="flex-shrink-0 px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg">
