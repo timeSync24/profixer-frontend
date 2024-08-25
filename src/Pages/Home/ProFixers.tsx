@@ -8,13 +8,13 @@ import { faApple, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 const ProFixers: React.FC = () => {
   return (
     <section className="py-16 bg-gray-50">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 px-4">
         {/* Image Section */}
         <div className="md:w-1/2 w-full mb-8 md:mb-0">
           <img
             src={MobileApp}
             alt="ProFixers App"
-            className="w-full h-96 rounded-lg shadow-md"
+            className="w-full h-auto rounded-lg shadow-md"
           />
         </div>
         
@@ -27,10 +27,10 @@ const ProFixers: React.FC = () => {
               className="w-12 h-12 rounded-lg"
             />
           </div>
-          <h3 className="text-4xl font-bold py-4 uppercase">Unlock the Full Power of ProFixers in Our App</h3>
-            <p className="text-gray-700 mb-8">
+          <h3 className="text-3xl md:text-4xl font-bold py-4 uppercase leading-tight">Unlock the Full Power of ProFixers in Our App</h3>
+          <p className="text-gray-700 mb-8 text-sm md:text-base">
             Manage your projects with ease, connect directly with professionals, make secure payments, and much more—all within the ProFixers app.
-            </p>
+          </p>
 
           <div className="flex justify-center md:justify-start space-x-4">
             <a 
