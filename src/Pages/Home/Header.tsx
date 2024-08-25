@@ -44,7 +44,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center p-6">
         {/* Main Header: Logo and Join Our Pro Network */}
         <div className="flex items-center">
-          <div className="profixer text-4xl font-bold text-pink-500 italic">Profixes</div>
+          <div className="profixer text-xl sm:text-4xl font-bold text-pink-500 italic">Profixers</div>
         </div>
         
         <div className="flex items-center space-x-4">
