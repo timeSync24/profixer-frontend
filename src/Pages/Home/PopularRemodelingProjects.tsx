@@ -1,13 +1,36 @@
 import React from 'react';
-import { remodelingProjects } from '../../data/mock';
+import bathroomImage from '../../assets/images/bathroom.jpg';
+import kitchenImage from '../../assets/images/kitchen.jpg';
+import deckImage from '../../assets/images/deck.jpg';
 
 const PopularRemodelingProjects: React.FC = () => {
+  const projects = [
+    {
+      id: 1,
+      title: 'Bathroom Remodel',
+      subtitle: 'Increase Home Value',
+      image: bathroomImage,
+    },
+    {
+      id: 2,
+      title: 'Kitchen Remodel',
+      subtitle: '',
+      image: kitchenImage,
+    },
+    {
+      id: 3,
+      title: 'New Decks & Porches',
+      subtitle: 'Popular Project',
+      image: deckImage,
+    },
+  ];
+
   return (
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto text-center">
         <h2 className="text-2xl font-bold mb-8">Popular remodeling projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {remodelingProjects.map((project) => (
+          {projects.map((project) => (
             <div key={project.id} className="relative rounded-lg overflow-hidden shadow-lg">
               <img src={project.image} alt={project.title} className="w-full h-96 object-cover" />
               {project.subtitle && (
