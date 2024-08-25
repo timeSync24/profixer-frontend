@@ -44,7 +44,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Main Header: Logo and Join Our Pro Network */}
         <div className="flex items-center">
-          <div className="profixer text-2xl font-bold text-pink-500 italic">Profixer</div>
+          <div className="profixer text-2xl font-bold text-pink-500 italic">Profixes</div>
         </div>
         
         <div className="flex items-center space-x-4">
@@ -174,7 +174,7 @@ const Header: React.FC = () => {
 
       {/* Subheader: Navigation Links */}
       <div className="bg-purple-500 border-t">
-        <div className="container mx-auto flex justify-center space-x-8 md:space-x-4 py-2 text-base sm:text-lg italic text-white">
+        <div className="container justify-center sm:justify-start mx-auto flex  space-x-8 md:space-x-8 py-3 text-base sm:text-lg italic text-white">
           <a href="#" className="text-white font-medium border-r-2 border-white pr-4">Interior</a>
           <a href="#" className="text-white font-medium border-r-2 border-white pr-4">Exterior</a>
           <a href="#" className="text-white font-medium border-r-2 border-white pr-4">Lawn</a>

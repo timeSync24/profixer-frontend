@@ -10,6 +10,7 @@ import ProjectQuote from './Pages/Home/ProjectQuote';
 import  PopularRemodelingProjects from './Pages/Home/PopularRemodelingProjects';
 import ProFixers from './Pages/Home/ProFixers';
 import Footer from './Pages/Home/Footer';
+import CostGuide from './Pages/Home/CostGuide';
 
 const App: React.FC = () => {
   return (
@@ -19,9 +20,11 @@ const App: React.FC = () => {
       <Recommended />
       <PopularRemodelingProjects />
       <Popular />
+      <CostGuide />
       <PopularHomeProject />
       <ProjectQuote />
       <ProFixers />
+     
       <Footer />
     
      
