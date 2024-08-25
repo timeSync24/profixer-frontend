@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import bathroomImage from '../../assets/images/bathroom.jpg';
 import kitchenImage from '../../assets/images/kitchen.jpg';
 import deckImage from '../../assets/images/deck.jpg';
@@ -44,9 +45,9 @@ const PopularRemodelingProjects: React.FC = () => {
             </div>
           ))}
         </div>
-        <a href="#" className="inline-block mt-8 text-teal-700 font-semibold hover:underline">
+        <Link to="/all-remodeling-projects" className="inline-block mt-8 text-teal-700 font-semibold hover:underline">
           Explore all projects
-        </a>
+        </Link>
       </div>
     </section>
   );
