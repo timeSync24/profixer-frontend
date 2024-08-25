@@ -14,3 +14,16 @@
 h1, h2 {
   font-family: "Edu AU VIC WA NT Hand", sans-serif;
 }
+
+
+
+
+@font-face {
+  font-family: "Playwrite PE", cursive;
+  font-optical-sizing: auto;
+  src: url("fonts/playwrite-pe.woff2") format("woff2"),
+       url("fonts/playwrite-pe.woff") format("woff");
+}
+.profixer {
+  font-family: "Playwrite PE", cursive;
+}

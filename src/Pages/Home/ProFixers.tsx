@@ -37,14 +37,14 @@ const ProFixers: React.FC = () => {
               href="#" 
               className="flex items-center bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
               <FontAwesomeIcon icon={faApple} className="mr-2" />
-              <span>Download on the App Store</span>
+              <span>App Store</span>
               <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-2 text-xs text-yellow-500" />
             </a>
             <a 
               href="#" 
               className="flex items-center bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
               <FontAwesomeIcon icon={faGooglePlay} className="mr-2" />
-              <span>Get it on Google Play</span>
+              <span>Google Play</span>
               <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-2 text-xs text-yellow-500" />
             </a>
           </div>

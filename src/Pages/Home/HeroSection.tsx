@@ -15,13 +15,13 @@ const HeroSection: React.FC = () => {
         </p>
 
         {/* Search Bar */}
-        <div className="flex flex-col lg:flex-row justify-center items-center max-w-lg lg:max-w-xl mx-auto mb-12 lg:mb-16 shadow-lg">
+        <div className="flex flex-col lg:flex-row justify-center items-center max-w-lg lg:max-w-xl mx-auto mb-12 lg:mb-16">
           <input 
             type="text" 
             placeholder="What do you need help with?" 
             className="w-full lg:w-auto lg:flex-grow px-5 py-3 lg:py-4 rounded-t-full lg:rounded-l-full lg:rounded-t-none border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600"
           />
-          <div className="flex items-center border-2 border-t-0 lg:border-t-2 lg:border-l-0 border-gray-300 bg-white">
+          <div className="flex items-center border-2 border-t-0 lg:border-t-2 lg:border-l-0 border-gray-300 bg-white rounded-2xl">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="text-gray-500 px-4" />
             <input
               type="text"
