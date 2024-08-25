@@ -1,15 +1,77 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { popularHomeProjects } from '../../data/mock';
+import mechanicsImage from '../../assets/images/mechanics.jpg';
+import woodWorkImage from '../../assets/images/wood-work.jpg';
+import cleanersImage from '../../assets/images/cleaners.jpg';
+import deckImage from '../../assets/images/deck.jpg';
+import kitchenImage from '../../assets/images/kitchen.jpg';
+import bathroomImage from '../../assets/images/bathroom.jpg';
 
 const PopularHomeProject: React.FC = () => {
+  const projects = [
+    {
+      id: 1,
+      title: 'Waste/Junk Removal',
+      rating: 4.8,
+      reviews: '192K',
+      price: 'From $250',
+      buttonText: 'Book now',
+      image: mechanicsImage,
+    },
+    {
+      id: 2,
+      title: 'Handyperson for Small Projects',
+      rating: 4.6,
+      reviews: '599K',
+      price: 'From $158',
+      buttonText: 'Book now',
+      image: woodWorkImage,
+    },
+    {
+      id: 3,
+      title: 'One-time Cleaning Service',
+      rating: 4.5,
+      reviews: '314K',
+      price: 'From $102',
+      buttonText: 'Book now',
+      image: cleanersImage,
+    },
+    {
+        id: 4,
+        title: 'Transitioning to a New Home',
+        rating: 4.8,
+        reviews: '192K',
+        price: 'From $250',
+        buttonText: 'Book now',
+        image: deckImage,
+      },
+      {
+        id: 5,
+        title: 'Kitchen Remodel',
+        rating: 4.6,
+        reviews: '599K',
+        price: 'From $158',
+        buttonText: 'Book now',
+        image: kitchenImage,
+      },
+      {
+        id: 6,
+        title: 'Bathroom Recovery',
+        rating: 4.5,
+        reviews: '314K',
+        price: 'From $102',
+        buttonText: 'Book now',
+        image: bathroomImage,
+      },
+  ];
+
   return (
     <section className="py-12">
       <div className="container mx-auto">
         <h2 className="text-2xl font-bold mb-6">Popular home projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-          {popularHomeProjects.map((project) => (
+          {projects.map((project) => (
             <div key={project.id} className="border w-3/4 rounded-lg shadow-sm overflow-hidden">
               <img src={project.image} alt={project.title} className="w-full h-44 object-cover" />
               <div className="p-6 flex flex-col justify-between">
