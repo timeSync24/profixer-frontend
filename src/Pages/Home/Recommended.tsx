@@ -9,7 +9,7 @@ const Recommended: React.FC = () => {
         <h2 className="text-2xl font-bold mb-8 text-center md:text-left">Recommended for you</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {recommendedProjects.map((project) => (
-            <div key={project.id} className="border-l-8 border-t border-r border-purple-400 p-6 rounded-lg shadow-sm flex flex-col justify-between">
+            <div key={project.id} className="border border-gray-200 p-6 rounded-lg shadow-lg flex flex-col justify-between">
               <div>
                 <span
                   className={`block mb-2 px-2 py-1 text-xs font-semibold uppercase rounded ${project.statusColor}`}

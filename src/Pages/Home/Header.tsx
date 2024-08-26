@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faChevronDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Link } from'react-router-dom';
+
+
 
 const Header: React.FC = () => {
   const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
@@ -44,7 +47,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center p-2">
         {/* Main Header: Logo and Join Our Pro Network */}
         <div className="flex items-center">
-          <div className="profixer text-xl sm:text-2xl font-bold text-pink-500 italic">Profixers</div>
+          <Link to="/" className="profixer text-xl sm:text-2xl font-bold text-pink-500 italic">Profixers</Link>
         </div>
         
         <div className="flex items-center space-x-4">
@@ -182,21 +185,21 @@ const Header: React.FC = () => {
         <div className="bg-gradient-to-r from-purple-600 to-purple-400">
         <div className="container mx-auto">
             <div className="flex items-center ml-4 space-x-6 overflow-x-auto py-2 text-sm  font-semibold text-white">
-            <a href="#" className="flex-shrink-0 px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg">
+            <Link to="/interior" className="flex-shrink-0 px-2 py-1 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg">
                 Interior
-            </a>
-            <a href="#" className="flex-shrink-0 px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg">
+            </Link>
+            <Link to="/exterior" className="flex-shrink-0 px-2 py-1 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg">
                 Exterior
-            </a>
-            <a href="#" className="flex-shrink-0 px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg">
+            </Link>
+            <Link to="lawn" className="flex-shrink-0 px-2 py-1 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg">
                 Lawn
-            </a>
-            <a href="#" className="flex-shrink-0 px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg">
-                More
-            </a>
-            <a href="#" className="flex-shrink-0 px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg hidden sm:inline-block">
+            </Link>
+            <Link to="/contact-us" className="flex-shrink-0 px-2 py-1 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg">
+                ContactUs
+            </Link>
+            <Link to="/articles" className="flex-shrink-0 px-2 py-1 bg-white bg-opacity-20 hover:bg-opacity-40 transition rounded-lg hidden sm:inline-block">
                 Articles
-            </a>
+            </Link>
             </div>
         </div>
         </div>
