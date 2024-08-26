@@ -9,6 +9,8 @@ import CostGuide from './CostGuide';
 import PopularHomeProject from './PopularHomeProject';
 import ProjectQuote from './ProjectQuote';
 import ProFixers from './ProFixers';
+import BecomeAProfixer from './BecomeAProfixer';
+
 
 const Home: React.FC = () => {
   return (
@@ -20,6 +22,7 @@ const Home: React.FC = () => {
       <CostGuide />
       <PopularHomeProject />
       <ProjectQuote />
+      <BecomeAProfixer />
       <ProFixers />
     </div>
   );

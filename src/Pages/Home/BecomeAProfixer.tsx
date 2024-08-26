@@ -1,0 +1,51 @@
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHammer, faCheckCircle, faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import becomeAProImage from '../../assets/images/logo.jpg';
+import { Link } from 'react-router-dom';
+
+const BecomeAProfixer: React.FC = () => {
+  return (
+    <div className="relative overflow-hidden py-20">
+    <section className="container mx-auto bg-gradient-to-r from-pink-300 via-pink-300 to-purple-200 py-20">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 text-white gap-12">
+        {/* Text Section */}
+        <div className="md:w-1/2 w-full mb-12 md:mb-0">
+          <h2 className="text-4xl font-bold mb-6 leading-tight">Become a ProFixer Today!</h2>
+          <p className="text-lg mb-8">
+            Join a network of skilled professionals and start earning more by connecting with customers who need your services. With ProFixer, you can set your own schedule, take on jobs that fit your skills, and get paid quickly.
+          </p>
+          <div className="mb-8">
+            <div className="flex items-center mb-4">
+              <FontAwesomeIcon icon={faCheckCircle} className="text-green-300 mr-3" />
+              <span>Access to thousands of job opportunities</span>
+            </div>
+            <div className="flex items-center mb-4">
+              <FontAwesomeIcon icon={faHammer} className="text-yellow-300 mr-3" />
+              <span>Work with the best tools and resources</span>
+            </div>
+            <div className="flex items-center mb-4">
+              <FontAwesomeIcon icon={faDollarSign} className="text-blue-300 mr-3" />
+              <span>Fast and secure payments</span>
+            </div>
+          </div>
+          <Link to="/sign-up" className="px-8 py-4 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-700 transition transform hover:scale-105">
+            Get Started
+          </Link>
+        </div>
+
+        {/* Image Section */}
+        <div className="md:w-1/2 w-full">
+          <img
+            src={becomeAProImage}
+            alt="Become a ProFixer"
+            className="w-full h-96 object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+    </div>
+  );
+};
+
+export default BecomeAProfixer;

@@ -51,18 +51,17 @@ const Header: React.FC = () => {
         </div>
         
         <div className="flex items-center space-x-4">
-        <a 
-                href="#" 
+        <Link to="/sign-up" 
                 className="bg-gradient-to-r from-purple-700 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:shadow-2xl hover:bg-gradient-to-l transition duration-300 ease-in-out text-lg hidden sm:block"
                 >
                 Become a Profixer
-                </a>
+                </Link>
 
           <div className="hidden md:flex space-x-4">
-            <button className="flex items-center text-gray-700 border px-3 py-2 rounded">
+            <Link to="/sign-in" className="flex items-center text-gray-700 border px-3 py-2 rounded">
               <FontAwesomeIcon icon={faUserCircle} className="mr-2" />
               Sign In
-            </button>
+            </Link>
           </div>
 
           {/* Language Dropdown */}
@@ -127,11 +126,11 @@ const Header: React.FC = () => {
       {navOpen && (
         <div className="md:hidden bg-purple-500 text-white">
           <div className="container mx-auto flex flex-col space-y-2 py-4 px-4">
-            <a href="#" className="text-white font-medium">Become a Profixer</a>
-            <button className="flex items-center text-white border px-3 py-2 rounded">
+            <Link to="/sign-up" className="text-white font-medium">Become a Profixer</Link>
+            <Link to="/sign-in" className="flex items-center text-white border px-3 py-2 rounded">
               <FontAwesomeIcon icon={faUserCircle} className="mr-2" />
               Sign In
-            </button>
+            </Link>
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={toggleDropdown}

@@ -11,6 +11,8 @@ import Articles from './Pages/Articles';
 import Lawn from './Pages/Lawn';
 import Interior from './Pages/Interior';
 import Exterior from './Pages/Exterior';
+import SignUp from './Component/SignUp';
+import SignIn from './Component/SignIn';
 
 const App: React.FC = () => {
   return (
@@ -24,7 +26,8 @@ const App: React.FC = () => {
         <Route path="/lawn" element={<Lawn />} /> 
         <Route path="/interior" element={<Interior />} />  
         <Route path="/exterior" element={<Exterior />} />
-        {/* Add more routes as needed */}
+        <Route path="/sign-up" element={<SignUp />} />  
+        <Route path="/sign-in" element={<SignIn />} />
       </Routes>
       <Footer />
     </Router>
