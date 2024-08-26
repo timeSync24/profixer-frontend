@@ -1,5 +1,3 @@
-// src/Pages/Home/Home.tsx
-
 import React from 'react';
 import HeroSection from './HeroSection';
 import Recommended from './Recommended';
@@ -10,12 +8,13 @@ import PopularHomeProject from './PopularHomeProject';
 import ProjectQuote from './ProjectQuote';
 import ProFixers from './ProFixers';
 import BecomeAProfixer from './BecomeAProfixer';
-
+import CertifiedProBadge from './CertifiedProBadge'; // Import the badge component
 
 const Home: React.FC = () => {
   return (
     <div>
       <HeroSection />
+      <CertifiedProBadge />
       <Recommended />
       <PopularRemodelingProjects />
       <Popular />

@@ -2,7 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHammer, faCheckCircle, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import becomeAProImage from '../../assets/images/logo.jpg';
-import { Link } from 'react-router-dom';
+import Button from '../../Component/Shared/Button';
+
 
 const BecomeAProfixer: React.FC = () => {
   return (
@@ -29,9 +30,9 @@ const BecomeAProfixer: React.FC = () => {
               <span>Fast and secure payments</span>
             </div>
           </div>
-          <Link to="/sign-up" className="px-8 py-4 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-700 transition transform hover:scale-105">
+          <Button to="/sign-up"  variant="tertiary" size="small" width="oneThird">
             Get Started
-          </Link>
+                </Button>
         </div>
 
         {/* Image Section */}

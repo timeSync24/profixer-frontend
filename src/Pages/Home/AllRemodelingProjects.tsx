@@ -12,6 +12,7 @@ import roadConstruction from '../../assets/images/road-construction.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import QuoteFormModal from '../../Component/Modal/QuoteFormModal';
+import CertifiedProBadge from '../../Component/Shared/CertifiedProBadge';
 
 type Project = {
   id: number;
@@ -24,6 +25,7 @@ type Project = {
   frequency: string;
   averageCost: string;
   image: string;
+  isCertified: boolean;
 };
 
 const AllRemodelingProjects: React.FC = () => {
@@ -42,6 +44,7 @@ const AllRemodelingProjects: React.FC = () => {
       frequency: 'High',
       averageCost: '$15,000 - $30,000',
       image: bathroomImage,
+      isCertified: true,
     },
     {
       id: 2,
@@ -54,6 +57,7 @@ const AllRemodelingProjects: React.FC = () => {
       frequency: 'Very High',
       averageCost: '$20,000 - $40,000',
       image: kitchenImage,
+      isCertified: false,
     },
     {
       id: 3,
@@ -66,6 +70,7 @@ const AllRemodelingProjects: React.FC = () => {
       frequency: 'Medium',
       averageCost: '$5,000 - $15,000',
       image: deckImage,
+      isCertified: true,
     },
     {
       id: 4,
@@ -78,6 +83,7 @@ const AllRemodelingProjects: React.FC = () => {
       frequency: 'Very High',
       averageCost: '$200,000 - $500,000',
       image: houseBuildingImage,
+      isCertified: false,
     },
     {
       id: 5,
@@ -90,6 +96,7 @@ const AllRemodelingProjects: React.FC = () => {
       frequency: 'High',
       averageCost: '$500 - $5,000',
       image: carMechanicImage,
+      isCertified: true,
     },
     {
       id: 6,
@@ -102,6 +109,7 @@ const AllRemodelingProjects: React.FC = () => {
       frequency: 'Medium',
       averageCost: '$3,000 - $10,000',
       image: housePaintingImage,
+      isCertified: false,
     },
     {
       id: 7,
@@ -114,6 +122,7 @@ const AllRemodelingProjects: React.FC = () => {
       frequency: 'High',
       averageCost: '$1,000 - $8,000',
       image: mechanicImage,
+      isCertified: false,
     },
     {
         id: 8,
@@ -126,6 +135,7 @@ const AllRemodelingProjects: React.FC = () => {
         frequency: 'Medium',
         averageCost: '$15,000 - $25,000',
         image: roofing,
+        isCertified: true,
       },
         {
             id: 9,
@@ -138,6 +148,7 @@ const AllRemodelingProjects: React.FC = () => {
             frequency: 'Very High',
             averageCost: '$500,000 - $1,000,000',
             image: roadConstruction,
+            isCertified: true,
             },
             {
                 id: 10,
@@ -150,6 +161,7 @@ const AllRemodelingProjects: React.FC = () => {
                 frequency: 'Very High',
                 averageCost: '$500,000 - $1,000,000',
                 image: roadConstruction,
+                isCertified: true,
                 },
   ];
 
@@ -170,38 +182,46 @@ const AllRemodelingProjects: React.FC = () => {
           <div key={category} className="mb-12">
             <h3 className="text-2xl font-semibold mb-6 text-purple-600">{category} Projects</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {projects.filter(project => project.category === category).map(project => (
-                <div key={project.id} className="relative rounded-lg overflow-hidden shadow-lg bg-white">
-                  <img src={project.image} alt={project.title} className="w-full h-64 md:h-80 object-cover" />
-                  {project.subtitle && (
-                    <span className="absolute top-4 left-4 bg-purple-700 text-white text-xs px-2 py-1 rounded">
-                      {project.subtitle}
-                    </span>
-                  )}
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-gray-600 mb-4">{project.description}</p>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center poppins-regular-italic">
-                        <FontAwesomeIcon icon={faStar} className="text-yellow-500 mr-1" />
-                        <span className="text-sm">{project.rating} ({project.reviews} reviews)</span>
-                      </div>
-                      <span className="text-sm text-gray-500">Frequency: {project.frequency}</span>
-                    </div>
-                    <div className="text-lg font-bold text-purple-700 mb-4">Average Cost: {project.averageCost}</div>
-                    <button
-                      onClick={() => setSelectedProject(project)}
-                      className="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-700 transition"
-                    >
-                      Get a Pro
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+            {projects.filter(project => project.category === category).map(project => (
+  <div key={project.id} className="relative rounded-lg overflow-hidden shadow-lg bg-white">
+    <img src={project.image} alt={project.title} className="w-full h-64 md:h-80 object-cover" />
+    {project.subtitle && (
+      <span className="absolute top-4 left-4 bg-purple-700 text-white text-xs px-2 py-1 rounded">
+        {project.subtitle}
+      </span>
+    )}
 
+    {/* Place the CertifiedProBadge in a corner of the card */}
+    {project.isCertified && (
+      <div className="absolute top-4 right-4">
+        <CertifiedProBadge />
+      </div>
+    )}
+
+    <div className="p-6">
+      <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+      <p className="text-gray-600 mb-4">{project.description}</p>
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center poppins-regular-italic">
+          <FontAwesomeIcon icon={faStar} className="text-yellow-500 mr-1" />
+          <span className="text-sm">{project.rating} ({project.reviews} reviews)</span>
+        </div>
+        <span className="text-sm text-gray-500">Frequency: {project.frequency}</span>
+      </div>
+      <div className="text-lg font-bold text-purple-700 mb-4">Average Cost: {project.averageCost}</div>
+      <button
+        onClick={() => setSelectedProject(project)}
+        className="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-700 transition"
+      >
+        Get a Pro
+      </button>
+    </div>
+  </div>
+))}
+     
+                </div>
+             </div>
+         ))}
         {/* Modal for requesting a quote */}
         {selectedProject && (
           <QuoteFormModal project={selectedProject} onClose={() => setSelectedProject(null)} />

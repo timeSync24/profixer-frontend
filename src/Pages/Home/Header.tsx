@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faChevronDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Button from '../../Component/Shared/Button';
 import { Link } from'react-router-dom';
 
 
@@ -51,11 +52,9 @@ const Header: React.FC = () => {
         </div>
         
         <div className="flex items-center space-x-4">
-        <Link to="/sign-up" 
-                className="bg-gradient-to-r from-purple-700 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:shadow-2xl hover:bg-gradient-to-l transition duration-300 ease-in-out text-lg hidden sm:block"
-                >
-                Become a Profixer
-                </Link>
+        <Button to="/sign-up" variant="primary" size="small">
+        Become a Profixer
+      </Button>
 
           <div className="hidden md:flex space-x-4">
             <Link to="/sign-in" className="flex items-center text-gray-700 border px-3 py-2 rounded">

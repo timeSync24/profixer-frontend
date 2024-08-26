@@ -8,7 +8,7 @@ export const recommendedProjects = [
       title: "Don't wait! Schedules are filling up for Electrical Switches...",
       buttonText: 'Resume',
       highlight: 'Electrical Switches',
-      statusColor: 'bg-purple-300 text-green-700',
+      statusColor: 'bg-purple-400 text-white',
       icon: faLightbulb,
     },
     {
@@ -17,7 +17,7 @@ export const recommendedProjects = [
       title: 'Handyman for Multiple Small Projects',
       buttonText: 'Get quotes',
       highlight: 'All home project',
-      statusColor: 'bg-gray-100 text-gray-700',
+      statusColor: 'bg-green-100 text-gray-700',
       icon: faToolbox,
     },
     {
@@ -26,7 +26,7 @@ export const recommendedProjects = [
       title: 'One Time Interior House Cleaning',
       buttonText: 'Get quotes',
       highlight: 'Full Home Cleaning',
-      statusColor: 'bg-gray-100 text-gray-700',
+      statusColor: 'bg-green-100 text-gray-700',
       icon: faBroom,
     },
   ];
