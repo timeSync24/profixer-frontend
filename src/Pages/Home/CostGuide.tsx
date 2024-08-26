@@ -3,7 +3,7 @@ import phoneImage from '../../assets/images/calculate.jpg'; // Replace with the 
 
 const CostGuide: React.FC = () => {
   return (
-    <div className="px-4 py-10 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-300 via-white to-pink-300">
+    <div className="px-4 py-10 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-300 via-white to-blue-300">
       <section className="py-10 sm:py-20">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16">
           {/* Text Section */}

@@ -4,7 +4,7 @@ import { faSearch, faMapMarkerAlt, faToolbox, faTree, faWrench, faBolt, faHammer
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-pink-50 via-pink-100 to-pink-50 py-16 lg:py-12">
+    <section className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 py-16 lg:py-12">
       <div className="container mx-auto text-center px-4">
         {/* Heading */}
         <h1 className="text-4xl lg:text-6xl font-extrabold text-gray-800 mb-6 lg:mb-10 w-full lg:w-2/3 mx-auto leading-snug lg:leading-tight">
@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
             placeholder="What do you need help with?" 
             className="w-full lg:w-auto lg:flex-grow px-5 py-3 lg:py-4 rounded-t-full lg:rounded-l-full lg:rounded-t-none border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600"
           />
-          <div className="flex items-center border-2 border-t-0 lg:border-t-2 lg:border-l-0 border-gray-300 bg-white rounded-2xl">
+           <div className="flex items-center border-2 border-t-0 lg:border-t-2 lg:border-l-0 border-gray-300 bg-white rounded">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="text-gray-500 px-4" />
             <input
               type="text"
@@ -35,31 +35,23 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Service Icons */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:justify-center space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-12">
-          <div className="text-center">
-            <FontAwesomeIcon icon={faToolbox} className="text-pink-500 text-4xl lg:text-5xl mb-2 lg:mb-3" />
-            <p className="text-gray-700 text-sm lg:text-lg font-semibold">Handyman Services</p>
-          </div>
-          <div className="text-center">
-            <FontAwesomeIcon icon={faTree} className="text-pink-500 text-4xl lg:text-5xl mb-2 lg:mb-3" />
-            <p className="text-gray-700 text-sm lg:text-lg font-semibold">Landscaping</p>
-          </div>
-          <div className="text-center">
-            <FontAwesomeIcon icon={faWrench} className="text-pink-500 text-4xl lg:text-5xl mb-2 lg:mb-3" />
-            <p className="text-gray-700 text-sm lg:text-lg font-semibold">Plumbing</p>
-          </div>
-          <div className="text-center">
-            <FontAwesomeIcon icon={faBolt} className="text-pink-500 text-4xl lg:text-5xl mb-2 lg:mb-3" />
-            <p className="text-gray-700 text-sm lg:text-lg font-semibold">Electrical</p>
-          </div>
-          <div className="text-center">
-            <FontAwesomeIcon icon={faHammer} className="text-pink-500 text-4xl lg:text-5xl mb-2 lg:mb-3" />
-            <p className="text-gray-700 text-sm lg:text-lg font-semibold">Remodeling</p>
-          </div>
-          <div className="text-center">
-            <FontAwesomeIcon icon={faHome} className="text-pink-500 text-4xl lg:text-5xl mb-2 lg:mb-3" />
-            <p className="text-gray-700 text-sm lg:text-lg font-semibold">Roofing</p>
-          </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:justify-center space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-12 mt-6">
+          {[
+            { icon: faToolbox, label: 'Home Improvement' },
+            { icon: faTree, label: 'Landscaping' },
+            { icon: faWrench, label: 'Plumbing' },
+            { icon: faBolt, label: 'Electrical' },
+            { icon: faHammer, label: 'Carpentry' },
+            { icon: faHome, label: 'General Contracting' },
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center p-4 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+            >
+              <FontAwesomeIcon icon={service.icon} className="text-pink-500 text-4xl lg:text-3xl mb-2 lg:mb-1" />
+              <span className="text-base font-semibold text-gray-800">{service.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

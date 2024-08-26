@@ -44,7 +44,7 @@ const Header: React.FC = () => {
   }, [languageDropdownOpen]);
 
   return (
-    <header className="bg-purple-50 border-b">
+    <header className="border-b">
       <div className="container mx-auto flex justify-between items-center p-2">
         {/* Main Header: Logo and Join Our Pro Network */}
         <div className="flex items-center">
@@ -56,9 +56,9 @@ const Header: React.FC = () => {
         Become a Profixer
       </Button>
 
-          <div className="hidden md:flex space-x-4">
-            <Link to="/sign-in" className="flex items-center text-gray-700 border px-3 py-2 rounded">
-              <FontAwesomeIcon icon={faUserCircle} className="mr-2" />
+          <div className="hidden md:flex space-x-4 bg-white">
+            <Link to="/sign-in" className="flex items-center text-black border px-3 py-2 rounded">
+              <FontAwesomeIcon icon={faUserCircle} className="mr-2 text-purple-500" />
               Sign In
             </Link>
           </div>

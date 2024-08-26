@@ -6,9 +6,9 @@ const ProjectQuote: React.FC = () => {
   return (
     <section className="bg-white py-20">
       {/* Signup Section */}
-      <div className="text-teal-900 py-16 bg-violet-300">
+      <div className="text-teal-900 py-16 bg-gradient-to-r from-blue-200 via-teal-100 to-blue-300">
         <div className="container mx-auto text-center px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-pink-600">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-black">
             Get free project cost information delivered to your inbox
           </h2>
           <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
@@ -39,7 +39,7 @@ const ProjectQuote: React.FC = () => {
             <p className="text-gray-600 mb-4">
               From routine maintenance and repairs to dream home renovations, we can help with any project—big or small.
             </p>
-            <button className="px-4 py-2 border border-teal-700 text-teal-700 rounded hover:bg-teal-100 transition">
+            <button className="px-4 py-2 border border-teal-700 text-teal-700 rounded hover:bg-purple-100 transition">
               Learn more
             </button>
           </div>
@@ -49,7 +49,7 @@ const ProjectQuote: React.FC = () => {
             <p className="text-gray-600 mb-4">
               See your price and book services in an instant. Or, request and compare quotes from highly rated pros near you.
             </p>
-            <button className="px-4 py-2 border border-teal-700 text-teal-700 rounded hover:bg-teal-100 transition">
+            <button className="px-4 py-2 border border-teal-700 text-teal-700 rounded hover:bg-purple-100 transition">
               Learn more
             </button>
           </div>
@@ -59,7 +59,7 @@ const ProjectQuote: React.FC = () => {
             <p className="text-gray-600 mb-4">
               When you book and pay with us, you’re covered by our Happiness Guarantee. We’ll cover your projects up to full purchase price, plus limited damage protection.
             </p>
-            <button className="px-4 py-2 border border-teal-700 text-teal-700 rounded hover:bg-teal-100 transition">
+            <button className="px-4 py-2 border border-teal-700 text-teal-700 rounded hover:bg-purple-100 transition">
               Learn more
             </button>
           </div>
