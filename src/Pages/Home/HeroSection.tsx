@@ -4,7 +4,7 @@ import { faSearch, faMapMarkerAlt, faToolbox, faTree, faWrench, faBolt, faHammer
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 py-16 lg:py-24">
+    <section className="bg-gradient-to-r from-blue-300 via-blue-50 to-blue-300 py-16 lg:py-24">
       <div className="container mx-auto text-center px-4 lg:px-8 max-w-screen-lg">
          {/* Heading */}
          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-6 lg:mb-10 w-full lg:w-4/5 mx-auto leading-snug lg:leading-tight">

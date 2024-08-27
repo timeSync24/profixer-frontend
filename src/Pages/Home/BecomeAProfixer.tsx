@@ -7,8 +7,8 @@ import Button from '../../Component/Shared/Button';
 const BecomeAProfixer: React.FC = () => {
   return (
     <div className="relative overflow-hidden py-20">
-      <section className="container mx-auto bg-gradient-to-r from-pink-300 via-pink-300 to-purple-200 py-20">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 text-white gap-12">
+      <section className="container mx-auto bg-gradient-to-r from-blue-100 via-blue-400 to-purple-500 py-20">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 text-gray-700 font-bold gap-12">
           {/* Text Section */}
           <div className="md:w-1/2 w-full mb-12 md:mb-0">
             <h2 className="text-4xl font-bold mb-6 leading-tight">Become a ProFixer Today!</h2>
