@@ -28,9 +28,9 @@ const Button: React.FC<ButtonProps> = ({
   
   const variantStyles = {
     primary: 'bg-gradient-to-r from-purple-700 to-pink-500 text-white hover:bg-gradient-to-l hover:shadow-2xl',
-    secondary: 'bg-gray-500 text-white hover:bg-gray-700',
+    secondary: 'bg-blue-500 text-white hover:bg-gray-700',
     tertiary: 'bg-gradient-to-r from-purple-700 to-pink-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:shadow-2xl hover:bg-gradient-to-l transition duration-300 ease-in-out text-lg hidden sm:block',
-    spaced: 'bg-gradient-to-r from-blue-500 to-blue-100 via-blue-400 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:shadow-2xl hover:bg-gradient-to-l transition duration-300 ease-in-out text-lg hidden sm:block',
+    spaced: 'bg-gradient-to-r from-blue-500 to-blue-100 via-blue-00 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:shadow-2xl hover:bg-gradient-to-l transition duration-300 ease-in-out text-lg hidden sm:block',
   };
   
   const sizeStyles = {

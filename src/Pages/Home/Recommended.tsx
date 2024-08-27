@@ -39,7 +39,7 @@ const Recommended: React.FC = () => {
               </div>
               <div className="flex justify-center mt-6">
                 <Button
-                  variant={project.buttonText === 'Resume' ? 'primary' : 'spaced'}
+                  variant={project.buttonText === 'Resume' ? 'primary' : 'secondary'}
                   size="medium"
                   className="w-full max-w-xs"
                 >
