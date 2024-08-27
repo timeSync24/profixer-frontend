@@ -45,7 +45,7 @@ const PopularRemodelingProjects: React.FC = () => {
             </div>
           ))}
         </div>
-        <Link to="/all-remodeling-projects" className="inline-block mt-8 text-teal-700 font-semibold hover:underline">
+        <Link to="/all-remodeling-projects" className="inline-block mt-8 text-teal-700 text-lg shadow-2xl bg-gray-50 border-2 rounded-lg p-1 hover:underline font-bold">
           Explore all projects
         </Link>
       </div>
