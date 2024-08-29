@@ -96,7 +96,7 @@ const SignUp: React.FC = () => {
   return (
     <section className="bg-purple-50 py-20">
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-purple-600 mb-8">Sign Up for a New Pro Account</h2>
-      <div className="container mx-auto max-w-md bg-purple-100 p-8 rounded-lg shadow-lg">
+      <div className="container mx-auto max-w-md bg-gray-50 p-8 rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold text-center text-purple-600 mb-8">
           {step === 1 ? 'Create Your Account' : step === 2 ? 'Company Details' : step === 3 ? 'Address Details' : 'Working Days & Time'}
         </h2>

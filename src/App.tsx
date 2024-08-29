@@ -13,6 +13,8 @@ import Interior from './Pages/Interior';
 import Exterior from './Pages/Exterior';
 import SignUp from './Component/SignUp';
 import SignIn from './Component/SignIn';
+import SearchResults from './Pages/Home/SearchResults';
+import ProviderDetails from './Pages/Home/ProviderDetail';
 
 const App: React.FC = () => {
   return (
@@ -28,6 +30,8 @@ const App: React.FC = () => {
         <Route path="/exterior" element={<Exterior />} />
         <Route path="/sign-up" element={<SignUp />} />  
         <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/search" element={<SearchResults />} />
+        <Route path="/provider/:id" element={<ProviderDetails />} />
       </Routes>
       <Footer />
     </Router>
