@@ -186,10 +186,11 @@ const SearchResults: React.FC = () => {
   const sortedProviders = sortProvidersByRating(filteredProviders);
 
   return (
-    <div className="container mx-auto py-16">
+    <div className="bg-green-50">
+    <div className="container mx-auto py-16 ">
       <h2 className="text-3xl font-bold mb-8">Search Results for "{service}" in {zipcode}</h2>
       
-      <div className="mb-4 flex justify-between items-center">
+      <div className="mb-4 flex justify-between items-center ">
         <div>
           <label htmlFor="price-filter" className="mr-2 font-semibold">Filter by Price:</label>
           <select
@@ -224,7 +225,7 @@ const SearchResults: React.FC = () => {
         {sortedProviders.map(provider => (
           <div key={provider.id} className="relative border rounded-lg p-4 shadow-lg bg-white flex flex-col justify-between">
             {provider.certified && (
-              <div className="absolute top-0 left-0 bg-yellow-500 mb-8 p-1 rounded-full">
+              <div className="absolute top-0 right-0 bg-yellow-500 mb-8 p-1 rounded-full mt-1">
                 <CertifiedProBadge />
               </div>
             )}
@@ -293,6 +294,7 @@ const SearchResults: React.FC = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
