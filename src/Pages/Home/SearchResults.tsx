@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import MechanicImage from '../../assets/images/mechanics.jpg';
 import HousePaintingImage from '../../assets/images/house-painting.jpg';
@@ -15,6 +15,9 @@ const SearchResults: React.FC = () => {
   const service = queryParams.get('service');
   const zipcode = queryParams.get('zipcode');
   const navigate = useNavigate();
+
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string | null>(null);
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
 
   const mockProviders = [
     {
@@ -140,11 +143,85 @@ const SearchResults: React.FC = () => {
     }
   ];
 
+  const priceRanges = [
+    { label: 'All', value: null },
+    { label: 'Under $100', value: 'under-100' },
+    { label: '$100 - $200', value: '100-200' },
+    { label: '$200 - $500', value: '200-500' },
+    { label: 'Above $500', value: 'above-500' },
+  ];
+
+  const filterProvidersByPrice = () => {
+    if (!selectedPriceRange) return mockProviders;
+
+    return mockProviders.filter(provider => {
+      const price = parseInt(provider.priceRange.replace(/[^0-9]/g, ''), 10);
+
+      switch (selectedPriceRange) {
+        case 'under-100':
+          return price < 100;
+        case '100-200':
+          return price >= 100 && price <= 200;
+        case '200-500':
+          return price >= 200 && price <= 500;
+        case 'above-500':
+          return price > 500;
+        default:
+          return true;
+      }
+    });
+  };
+
+  const sortProvidersByRating = (providers: typeof mockProviders) => {
+    return providers.sort((a, b) => {
+      if (sortOrder === 'asc') {
+        return a.rating - b.rating;
+      } else {
+        return b.rating - a.rating;
+      }
+    });
+  };
+
+  const filteredProviders = filterProvidersByPrice();
+  const sortedProviders = sortProvidersByRating(filteredProviders);
+
   return (
     <div className="container mx-auto py-16">
       <h2 className="text-3xl font-bold mb-8">Search Results for "{service}" in {zipcode}</h2>
+      
+      <div className="mb-4 flex justify-between items-center">
+        <div>
+          <label htmlFor="price-filter" className="mr-2 font-semibold">Filter by Price:</label>
+          <select
+            id="price-filter"
+            className="border border-gray-300 rounded-md p-2"
+            value={selectedPriceRange || ''}
+            onChange={e => setSelectedPriceRange(e.target.value)}
+          >
+            {priceRanges.map(range => (
+              <option key={range.value || 'all'} value={range.value || ''}>
+                {range.label}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="sort-order" className="mr-2 font-semibold">Sort by Rating:</label>
+          <select
+            id="sort-order"
+            className="border border-gray-300 rounded-md p-2"
+            value={sortOrder}
+            onChange={e => setSortOrder(e.target.value as 'asc' | 'desc')}
+          >
+            <option value="desc">Highest to Lowest</option>
+            <option value="asc">Lowest to Highest</option>
+          </select>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {mockProviders.map(provider => (
+        {sortedProviders.map(provider => (
           <div key={provider.id} className="relative border rounded-lg p-4 shadow-lg bg-white flex flex-col justify-between">
             {provider.certified && (
               <div className="absolute top-0 left-0 bg-yellow-500 mb-8 p-1 rounded-full">
@@ -221,4 +298,3 @@ const SearchResults: React.FC = () => {
 };
 
 export default SearchResults;
-
